@@ -18,3 +18,5 @@ Az ezüst láda a megoldás
 
 Ha a felhasználó az ezüst ládát nyitja ki akkor a program felugróablakban gratulál neki.
 Ha más opciót választ felugróablakban jelzi a program a felhasználónak hogy nem a kinccsel teli ládát nyitotta ki
+
+![screenshot](guiFelulet.png)
