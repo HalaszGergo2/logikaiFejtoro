@@ -4,6 +4,8 @@
  */
 package logikaifejtoro;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author BajáriGergő(SZF_2023
@@ -55,6 +57,11 @@ public class LogikaiFejtoroGUI extends javax.swing.JFrame {
         bronzLadaLBL.setText("Bronzláda");
 
         bronzBTTN.setText("Kinyit");
+        bronzBTTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rosszBTNActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout bronzPNLLayout = new javax.swing.GroupLayout(bronzPNL);
         bronzPNL.setLayout(bronzPNLLayout);
@@ -99,6 +106,11 @@ public class LogikaiFejtoroGUI extends javax.swing.JFrame {
 
         ezustBTTN.setText("Kinyit");
         ezustBTTN.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        ezustBTTN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                joBTNActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout ezustPNLLayout = new javax.swing.GroupLayout(ezustPNL);
         ezustPNL.setLayout(ezustPNLLayout);
@@ -144,7 +156,7 @@ public class LogikaiFejtoroGUI extends javax.swing.JFrame {
         aranyBTTN.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         aranyBTTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                aranyBTTNActionPerformed(evt);
+                rosszBTNActionPerformed(evt);
             }
         });
 
@@ -216,9 +228,14 @@ public class LogikaiFejtoroGUI extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void aranyBTTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aranyBTTNActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_aranyBTTNActionPerformed
+    private void rosszBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rosszBTNActionPerformed
+        //JOptionPane.showMessageDialog(rootPane, "Nem a kinccsel teli ládát nyitottad ki!");
+        JOptionPane.showMessageDialog(rootPane, "Nem a kinccsel teli ládát nyitottad ki!", "Ez most nem sikerült!", JOptionPane.ERROR_MESSAGE);
+    }//GEN-LAST:event_rosszBTNActionPerformed
+
+    private void joBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_joBTNActionPerformed
+        JOptionPane.showMessageDialog(rootPane, "Gratulákok, jó ládát nyitottál ki, a kincs a tiéd!", "Juhhu!", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_joBTNActionPerformed
 
     /**
      * @param args the command line arguments

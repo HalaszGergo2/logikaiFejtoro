@@ -131,6 +131,9 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Kinyit"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rosszBTNActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
@@ -209,6 +212,9 @@
             <Property name="text" type="java.lang.String" value="Kinyit"/>
             <Property name="horizontalTextPosition" type="int" value="0"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="joBTNActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
@@ -285,7 +291,7 @@
             <Property name="horizontalTextPosition" type="int" value="0"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="aranyBTTNActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rosszBTNActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
