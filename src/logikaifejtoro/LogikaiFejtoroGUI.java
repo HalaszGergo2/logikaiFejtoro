@@ -8,8 +8,11 @@ import javax.swing.JOptionPane;
 
 public class LogikaiFejtoroGUI extends javax.swing.JFrame {
 
+    private boolean nalunkVanE = false;
+
     public LogikaiFejtoroGUI() {
         initComponents();
+
     }
 
     @SuppressWarnings("unchecked")
@@ -221,25 +224,18 @@ public class LogikaiFejtoroGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_rosszBTNActionPerformed
 
     private void joBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_joBTNActionPerformed
-        //JOptionPane.showMessageDialog(rootPane, "Gratulákok, jó ládát nyitottál ki, a kincs a tiéd!", "Juhhu!", JOptionPane.INFORMATION_MESSAGE);
         String[] valasztasok = { "Kiveszem", "Bennehagyom"};
-        int kincs = 1;
-        boolean nalunkVanE = false;
-        while(!nalunkVanE){
-            if(ezustBTTN.isEnabled()){
-                int valasz = JOptionPane.showOptionDialog(rootPane, "Gratulálok! megtaláltad a kincset, kiveszed vagy bennehagyod?", "Juhhu", 0, 2, null, valasztasok, EXIT_ON_CLOSE);
-                if(valasz == 0){
-                    //kincs--;
-                    nalunkVanE = true;
-                    JOptionPane.showMessageDialog(rootPane, "Kivetted a kincset");
-                }else{
-                    JOptionPane.showMessageDialog(rootPane, "Bennehagytad a kincset");
-                }
-            }
+
+        if (!nalunkVanE) {
+        int valasz = JOptionPane.showOptionDialog(null, "Gratulálok! Megtaláltad a kincset, kiveszed vagy bennehagyod?", "Juhhu", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, valasztasok, valasztasok[0]);
+        if (valasz == 0) {
+            nalunkVanE = true;
+            JOptionPane.showMessageDialog(null, "Kivetted a kincset.");
         }
-       // if(nalunkVanE == true){
-       //     JOptionPane.showMessageDialog(rootPane, "Már kivetted a kincset");
-       // }
+        } else if (nalunkVanE) {
+            JOptionPane.showMessageDialog(null, "Már kivetted a kincset!");
+}
+        
         
     }//GEN-LAST:event_joBTNActionPerformed
 
